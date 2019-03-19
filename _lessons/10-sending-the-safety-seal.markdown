@@ -10,7 +10,7 @@ Assume that the operator has tested the product thoroughly, determining it shoul
 
 Implementing this process consists of:
 
-1) Creating a Transfer Transaction, adding one company.safety:seal.
+1) Creating a Transfer Transaction, adding one company.safetyseal.
 
 2) Signing the Transfer Transaction with the operator's account.
 
@@ -34,7 +34,7 @@ In the previous module, you have already sent a transfer transaction, but didn't
  
 * **Deadline**: How many blocks can pass before the transaction has to be included in a block.
 * **Recipient**: product address.
-* **Mosaics**: 1 company.safety:seal.
+* **Mosaics**: 1 company.safetyseal.
 * **Network**: In this exercise, we are using MIJIN_TESTNET.
 
 {% highlight typescript %}
@@ -43,7 +43,7 @@ createSafetySealTransaction(productAddress: Address): TransferTransaction {
     return TransferTransaction.create(
       Deadline.create(),
       productAddress,
-      [new Mosaic(new MosaicId('company.safety:seal'), UInt64.fromUint(1))],
+      [new Mosaic(new NamespaceId('company.safetyseal'), UInt64.fromUint(1))],
       EmptyMessage,
       NetworkType.MIJIN_TEST
     );

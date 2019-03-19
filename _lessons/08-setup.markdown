@@ -85,15 +85,17 @@ $> nem2-cli transaction namespace --name company --rootnamespace --duration 9000
 
 3\. Did the network confirm the transaction? Check the opened terminals.
 
-##  Register company.safety subnamespace
+##  Register company.safetyseal subnamespace
 
 Once the company's namespace has been registered, you can create related subnamespaces.
 
-Register the subnamespace ``company.safety``:
+Register the subnamespace ``company.safetyseal``:
 
 {% highlight bash %}
-$> nem2-cli  transaction namespace --name safety --subnamespace  --parentname company --profile company
+$> nem2-cli  transaction namespace --name safetyseal --subnamespace  --parentname company --profile company
 {% endhighlight %}
+
+<!-->Need to wait for https://github.com/nemtech/nem2-cli/issues/17 to finish to write the next part<-->
 
 ## Create company.safety:seal mosaic
 
@@ -114,7 +116,7 @@ $> nem2-cli transaction mosaic --mosaicname seal --namespacename company.safety 
 {% highlight bash %}
 $> nem2-cli transaction transfer --profile company
 Introduce the recipient address: SA56XXRVS7NG7UH3DTZEMRIVJJLDXXPKAYQAFT2S
-Introduce the mosaics in the format namespaceName:mosaicName::absoluteAmount, add multiple mosaics splitting them with a comma:
+Mosaic you want to get in the format (mosaicId(hex)|@aliasName)::absoluteAmount, (Ex: sending 1 cat.currency, @cat.currency::1000000). Add multiple mosaics with commas:
 > company.safety:seal::1000,nem:xem::1000000000
 
 {% endhighlight %}

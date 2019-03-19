@@ -22,11 +22,11 @@ Consider NEM accounts as containers for assets in the blockchain. An account cou
 
 ## Namespace & Mosaics
 
-![mosaic]({{ site.baseurl }}/assets/images/concept-mosaic.png)
+![mosaic]({{ site.baseurl }}/assets/images/namespace-tickets.png)
 
 [Namespaces](https://nemtech.github.io/concepts/namespace.html) allow you to create an on-chain unique place for your business and your assets on the NEM blockchain. A namespace starts with a name that you choose, similar to an internet domain name.
 
-After registering your namespace, you can define subnamespaces, as well as your mosaics.
+After registering your namespace, you can define subnamespaces. Next to this you can create mosaics. To make them easily identifiable, you can assign the namespace or subnamespace name to the mosaic. We call the (sub)namespace in this case alias.
 
 [Mosaics](https://nemtech.github.io/concepts/mosaic.html) are part of what makes the Smart Asset System different and flexible. They are fixed assets on the NEM blockchain that can represent a set of multiple identical things that do not change. A mosaic could be a token, but it could also represent a collection of more specialised assets like reward points, shares of stock, signatures, status flags, votes or even other currencies.
                                                                                                                                                                                                  

@@ -88,13 +88,13 @@ We are creating a ``ModifyMultisigAccountTransaction``, setting the ``minApprova
 
 ![screenshot-multisig-service-company]({{ site.baseurl }}/assets/images/screenshot-multisig-service-safety-department.png)
 
-6\. Load ``safety deparment`` account with 1.000 ``company.safety:seal``.
+6\. Load ``safety deparment`` account with 1.000 ``company.safetyseal``.
 
 {% highlight bash %}
 $> nem2-cli transaction transfer --profile company
 Introduce the recipient address: SCSG23-J2BVLU-S4JA4N-ZKMYKV-JR5LTK-M76KJ7-Q2V3
-Introduce the mosaics in the format namespaceName:mosaicName::absoluteAmount, add multiple mosaics splitting them with a comma:
-> company.safety:seal::1000
+Mosaic you want to get in the format (mosaicId(hex)|@aliasName)::absoluteAmount, (Ex: sending 1 cat.currency, @cat.currency::1000000). Add multiple mosaics with commas:
+> @company.safetyseal::1000
 
 {% endhighlight %}
 
@@ -115,7 +115,7 @@ createSafetySealTransaction(productAddress: Address, operatorAccount: PublicAcco
     const safetyDepartmentToProductTransaction = TransferTransaction.create(
       Deadline.create(),
       productAddress,
-      [new Mosaic(new MosaicId('company.safety:seal'), UInt64.fromUint(1))],
+      [new Mosaic(new NamespaceId('company.safetyseal'), UInt64.fromUint(1))],
       EmptyMessage,
       NetworkType.MIJIN_TEST
     );

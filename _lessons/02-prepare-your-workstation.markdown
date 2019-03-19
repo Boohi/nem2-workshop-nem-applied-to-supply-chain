@@ -15,7 +15,7 @@ You are going to **run a private chain** for learning purposes using [Catapult S
 1\. Make sure you have [docker](https://docs.docker.com/install/) and [docker compose](https://docs.docker.com/compose/install/) installed before running the following commands:
 
 {% highlight bash %}
-git clone https://github.com/tech-bureau/catapult-service-bootstrap.git --branch v0.1.0
+git clone https://github.com/tech-bureau/catapult-service-bootstrap.git
 cd catapult-service-bootstrap
 docker-compose up
 {% endhighlight %}
@@ -64,7 +64,7 @@ npm start
 
 ## Installing NEM2-CLI
 
-**NEM2-CLI** conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up and account, sending funds, etc.
+**NEM2-CLI** conveniently allows you to perform the most commonly used commands from your terminal i.e. using it to interact with the blockchain, setting up an account, sending funds, etc.
 
 Install **nem2-cli** using npm.
 

@@ -44,7 +44,7 @@ Create digital safety sensor account.
 
 2\. Create two transfer transactions:
 
-* **operatorToProductTransaction**:Transfer Transaction to product address, sending one company.safety seal.
+* **operatorToProductTransaction**:Transfer Transaction to product address, sending one company.safetyseal.
 * **sensorToProductTransaction**: Transfer Transaction to product address, with the message inspection, passed.
 
 {% highlight typescript %}
@@ -56,7 +56,7 @@ createSafetySealTransaction(productAddress: Address, operatorAccount: PublicAcco
     const operatorToProductTransaction = TransferTransaction.create(
       Deadline.create(),
       productAddress,
-      [new Mosaic(new MosaicId('company.safety:seal'), UInt64.fromUint(1))],
+      [new Mosaic(new NamespaceId('company.safetyseal'), UInt64.fromUint(1))],
       EmptyMessage,
       NetworkType.MIJIN_TEST
     );
@@ -88,7 +88,7 @@ createSafetySealTransaction(productAddress: Address, operatorAccount: PublicAcco
     const operatorToProductTransaction = TransferTransaction.create(
       Deadline.create(),
       productAddress,
-      [new Mosaic(new MosaicId('company.safety:seal'), UInt64.fromUint(1))],
+      [new Mosaic(new NamespaceId('company.safetyseal'), UInt64.fromUint(1))],
       EmptyMessage,
       NetworkType.MIJIN_TEST
     );

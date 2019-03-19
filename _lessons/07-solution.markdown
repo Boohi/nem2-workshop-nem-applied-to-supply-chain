@@ -43,7 +43,7 @@ As if it were an ID card, an account identifies and allows the warehouse operato
 
 **Safety seal**
 
-The **safety seal** is represented with a **namespace, a subnamespace and a mosaic**. A namespace identifies the company, and a subnamespace the division. The mosaic ``company.safety:seal`` represents the safety seals. 
+The **safety seal** is represented with a **namespace, a subnamespace and a mosaic alias** assigned to this set. A namespace identifies the company, and a subnamespace the use-case. The mosaic ``company.safetyseal`` represents the safety seals. 
 
 We could opt to set ``transferable`` property to false. This would prevent transferring the mosaic to other accounts once sent. However, as we are not saving the products' private keys, there is no risk of the seals being moved once sent to a product.
 
@@ -51,4 +51,4 @@ Who will be the owner of this namespace and mosaic? At first glance, it may seem
 
 The **Company** sends some mosaics to the **warehouse operator** account. 
 
-The warehouse operator sends a **transfer transaction** to the product, with ``1 company.safety:seal mosaic``.
+The warehouse operator sends a **transfer transaction** to the product, with ``1 company.safetyseal mosaic``.
